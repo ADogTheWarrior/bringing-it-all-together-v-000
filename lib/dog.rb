@@ -1,11 +1,9 @@
 class Dog
   attr_accessor :name, :breed, :id
 
-  def initialize(attributes=nil)
+  def initialize(attributes)
     @id = nil
-    if attributes != nil
-      attributes.each {|key, value| self.send(("#{key}="), value)}
-    end
+    attributes.each {|key, value| self.send(("#{key}="), value)}
     self
   end
 
