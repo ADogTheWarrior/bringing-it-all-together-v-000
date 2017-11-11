@@ -141,6 +141,7 @@ describe "Dog" do
 
   describe '#update' do
     it 'updates the record associated with a given instance' do
+  binding.pry
       teddy.save
       teddy.name = "Teddy Jr."
       teddy.update
