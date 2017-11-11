@@ -47,7 +47,7 @@ class Dog
   def self.find_or_create_by(attributes)
   end
 
-  def self.new_from_db(row) #[id, name, breed]
+  def self.new_from_db(row)
     hash = {}
     hash[:id] = row[0]
     hash[:name] = row[1]
