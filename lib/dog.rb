@@ -7,6 +7,13 @@ class Dog
     self
   end
 
+  def new_by_row(row)
+    @id = row[0]
+    @name = row[1]
+    @breed = row[2]
+    self
+  end
+
   def self.create_table
     sql =  <<-SQL
       CREATE TABLE IF NOT EXISTS dogs (
@@ -51,7 +58,9 @@ class Dog
   end
 
   def self.find_by_name(name)
-    
+    sql = "SELECT * FROM songs WHERE name = ?"
+    result = DB[:conn].execute(sql, name)[0]
+    Dog.new(result[0], result[1], result[2])
   end
 
   def update
