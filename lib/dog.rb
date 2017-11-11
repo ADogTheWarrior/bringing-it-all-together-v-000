@@ -8,10 +8,11 @@ class Dog
   end
 
   def self.new_by_row(row)
-    @id = row[0]
-    @name = row[1]
-    @breed = row[2]
-    self
+    dog = Dog.new
+    dog.id = row[0]
+    dog.name = row[1]
+    dog.breed = row[2]
+    dog
   end
 
   def self.create_table
