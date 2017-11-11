@@ -5,7 +5,6 @@ class Dog
     @id = nil
     attributes.each {|key, value| self.send(("#{key}="), value)}
     self
-      # binding.pry
   end
 
   def self.create_table
@@ -57,5 +56,6 @@ class Dog
   def update
     sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.breed, self.id)
+    binding.pry
   end
 end
