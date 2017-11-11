@@ -53,7 +53,11 @@ class Dog
   def self.find_by_name(name)
     sql = "SELECT * FROM dogs WHERE name = ?"
     result = DB[:conn].execute(sql, name)[0]
-    Dog.new_by_row(result)
+    hash = {}
+    hash[:id] = result[0]
+    hash[:name] = result[1]
+    hash[:breed] = result[2]
+    Dog.new(hash)
   end
 
   def update
