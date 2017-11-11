@@ -23,5 +23,19 @@ class Dog
   def self.drop_table
     DB[:conn].execute("DROP TABLE IF EXISTS dogs")
   end
-  
+
+  def save
+  end
+
+  def self.create(attributes)
+  end
+
+  def self.find_by_id(id)
+  end
+
+  def self.find_or_create_by(attributes)
+    binding.pry
+  end
+
+  def
 end
