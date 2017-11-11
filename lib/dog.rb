@@ -3,7 +3,9 @@ class Dog
 
   def initialize(attributes=nil)
     @id = nil
-    attributes.each {|key, value| self.send(("#{key}="), value)}
+    if attributes != nil
+      attributes.each {|key, value| self.send(("#{key}="), value)}
+    end
     self
   end
 
