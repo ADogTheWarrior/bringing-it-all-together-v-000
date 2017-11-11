@@ -59,6 +59,7 @@ class Dog
     binding.pry
     if !dog.empty?
       dog = Dog.new(attributes)
+      dog.save
     else
       dog = self.create(attributes)
     end
