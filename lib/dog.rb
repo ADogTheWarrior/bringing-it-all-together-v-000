@@ -43,6 +43,5 @@ class Dog
   end
 
   def update(id)
-    binding.pry
   end
 end
