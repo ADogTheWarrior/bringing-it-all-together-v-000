@@ -63,7 +63,6 @@ class Dog
     sql = "SELECT * FROM dogs WHERE name = ?"
     result = DB[:conn].execute(sql, name)[0]
     Dog.new_by_row(result)
-    binding.pry
   end
 
   def update
