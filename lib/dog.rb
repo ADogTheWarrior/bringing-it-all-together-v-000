@@ -7,15 +7,6 @@ class Dog
     self
   end
 
-  def self.new_by_row(row)
-    dog = Dog.new
-    dog.id = row[0]
-    dog.name = row[1]
-    dog.breed = row[2]
-    binding.pry
-    dog
-  end
-
   def self.create_table
     sql =  <<-SQL
       CREATE TABLE IF NOT EXISTS dogs (
