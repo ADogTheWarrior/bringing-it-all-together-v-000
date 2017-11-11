@@ -36,12 +36,12 @@ class Dog
   def self.find_or_create_by(attributes)
   end
 
-  def self.new_from_db(attributes)
+  def self.new_from_db(id)
   end
 
   def self.find_by_name(name)
   end
 
-  def update
+  def update(id)
   end
 end
